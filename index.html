@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Redesigned Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../styles/index.css">
+  
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between ">
+  <img src="../assets/logos/logo.png" alt="logo" />
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 " >
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Capabilities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Our Work</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="#">Product</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link " href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container-fluid main-container " >
+<div class="row"> 
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 contact-text ">
+  <h1>Contact Us</h1>
+  <p>Please fill out this form to speak directly with our team.</p>
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 main-image-container ">
+      <img src="../assets/images/ContactUs.svg" alt="contact us icon" />  
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 "> 
+      <form class="mr-5">
+      <div class="field">
+        <input type="text" class="input-form" name="firstname" id="firstname" placeholder="Type your first name">
+        <label for="fullname">First Name</label>
+      </div>
+      
+      <div class="field">
+        <input type="text" class="input-form" name="lastname" id="lastname" placeholder="type your second name">
+        <label for="email">Last Name</label>
+      </div>
+      <div class="field emailfield">
+        <span class="email-error-container"></span>
+        <input type="email" class="input-form" name="email" id="email" placeholder="rokastest@example.com">
+        <label for="email" id="emailLabel">Email</label>
+      </div>
+
+      <div class="form-group message-container">
+        <label for="comment">Message</label>
+        <textarea class="form-control" rows="5" cols="70"  id="comment" placeholder="Type your message..."></textarea>
+      </div>
+    
+      <p>Digital On Six values your privacy and won't share your information with a third party. Check out our privacy policy <a href="" class="hyperlink-style">here</a>.</p>
+      <button class="button" id="formSubmissionButton">Send</button>
+      </form>  
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <img src="../assets/images/ConfirmationCheckmark.svg" alt="Confirmation checkbox" />  
+      </div>
+      <div class="modal-body">
+        <p>Submitted!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="hyperlink-style">Back to Home</a>
+      </div>
+    </div>
+  
+  </div>
+
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>
