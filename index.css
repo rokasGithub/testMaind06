@@ -1,3 +1,8 @@
+@font-face {
+  font-family: avenir;
+  src: url(Avenir.ttc);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +18,8 @@ body {
   overflow-x: hidden;
   background-color: #fbfbfb;
   height: 100vh;
-  font-family: Avenir;
+  font-family: avenir;
+  overflow-x: hidden;
 }
 
 img {
@@ -30,8 +36,6 @@ img {
 .navbar-nav li a {
   font-size: 14px;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   background-color: #fbfbfb;
@@ -46,13 +50,11 @@ img {
 }
 
 .main-container {
-  padding: 0px 0px 0px 40px;
+  padding: 0px 0px 20px 20px;
   margin-top: 10px;
 }
 
 .contact-text {
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
 }
@@ -104,8 +106,6 @@ input {
 
   font-size: 20px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.35;
   letter-spacing: 0px;
   color: #000000;
@@ -119,8 +119,6 @@ input {
 .form-group label {
   font-size: 20px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.35;
   letter-spacing: 0px;
   color: #000000;
@@ -129,9 +127,24 @@ input {
   border-right: 0;
 }
 
+textarea:focus {
+  border-radius: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(
+    to right,
+    #0099cc,
+    #85baae 83%,
+    #cbe5c2 118%
+  );
+  border-image-slice: 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
 input:focus {
   outline: 0;
-  border-bottom: 1px solid #666;
+  border-bottom-width: 3px;
 }
 
 input:placeholder-shown + label {
@@ -160,9 +173,7 @@ input:focus + label {
 label {
   font-size: 18px;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
+  line-height: 1;
   letter-spacing: 0px;
   color: #383838;
 
@@ -175,22 +186,30 @@ label {
 
 form button {
   height: 40px;
-  padding: 11px 169px;
   border-radius: 4px;
-  background-color: #b5b5b5;
   outline: none;
+  padding: 0;
+  border: none;
+  background: none;
   font-size: 13px;
+  width: 100%;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: 0px;
   color: #ffffff;
-  width: 100%;
+  /* width: 100%; */
 }
 
 form button:focus {
   outline: 0;
+}
+
+.enabled-background {
+  background-color: #009acd;
+}
+
+.disabled-background {
+  background-color: #b5b5b5;
 }
 
 /*  Modal code */
@@ -214,7 +233,7 @@ form button:focus {
 /* Modal Content */
 .modal-content {
   border: 1px solid #888;
-  width: 30%;
+  width: 60%;
   margin: auto;
   height: 300px;
   padding: 30px 94px 41px;
@@ -231,19 +250,18 @@ form button:focus {
 /* The Close Button */
 .close {
   /* color: #aaaaaa; */
-  position: relative;
-  top: 20;
-  color: red;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  position: absolute;
+  top: -45px;
+  right: 2px;
+  color: white;
+  font-size: 50px;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
+  color: white;
 }
 
 .modal-footer a {
@@ -254,8 +272,6 @@ form button:focus {
   margin: 30px 0;
   font-size: 30px;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: -0.01px;
   color: #000000;
@@ -275,12 +291,16 @@ form button:focus {
 .message-container label {
   font-size: 28px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.35;
   letter-spacing: 0px;
 }
 
-.email-error-container {
+.error-message-color {
   color: #9b0000;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
 }

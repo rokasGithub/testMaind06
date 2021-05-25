@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="index.css">
   
 </head>
 <body>
@@ -47,34 +47,37 @@
 
 
   <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 main-image-container ">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 main-image-container ">
       <img src="../assets/images/ContactUs.svg" alt="contact us icon" />  
     </div>
 
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 "> 
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 "> 
       <form class="mr-5">
       <div class="field">
+        <span class="error-message-color firstname-error-container"></span>
         <input type="text" class="input-form" name="firstname" id="firstname" placeholder="Type your first name">
         <label for="fullname">First Name</label>
       </div>
       
       <div class="field">
-        <input type="text" class="input-form" name="lastname" id="lastname" placeholder="type your second name">
+        <span class="error-message-color lastname-error-container"></span>
+        <input type="text" class="input-form" name="lastname" id="lastname" placeholder="Type your second name">
         <label for="email">Last Name</label>
       </div>
-      <div class="field emailfield">
-        <span class="email-error-container"></span>
+      <div class="field">
+        <span class="error-message-color email-error-container"></span>
         <input type="email" class="input-form" name="email" id="email" placeholder="rokastest@example.com">
         <label for="email" id="emailLabel">Email</label>
       </div>
 
       <div class="form-group message-container">
         <label for="comment">Message</label>
-        <textarea class="form-control" rows="5" cols="70"  id="comment" placeholder="Type your message..."></textarea>
+        <textarea class="input-form form-control" rows="5" cols="70"  id="message" placeholder="Type your message..."></textarea>
+        <span class="error-message-color comment-error-container"></span>
       </div>
     
       <p>Digital On Six values your privacy and won't share your information with a third party. Check out our privacy policy <a href="" class="hyperlink-style">here</a>.</p>
-      <button class="button" id="formSubmissionButton">Send</button>
+      <button disabled class="button disabled-background" id="formSubmissionButton" >Send</button>
       </form>  
     </div>
   </div>
@@ -100,6 +103,6 @@
   </div>
 
 
-<script src="../scripts/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
