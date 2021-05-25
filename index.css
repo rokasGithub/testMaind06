@@ -24,9 +24,9 @@ html,
 body {
   overflow-x: hidden;
 }
-body {
+/* body {
   position: relative;
-}
+} */
 
 img {
   /* max-width: 100%; */
