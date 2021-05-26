@@ -1,7 +1,15 @@
 @font-face {
-  font-family: avenir;
-  src: url(Avenir.ttc);
+  font-family: 'Avenir';
+  src: url('Avenir.ttc');
+
+  /* font-style: italic; */
 }
+
+/* @font-face {
+  font-family: 'avenir-heavy';
+  src: url('Avenir-Black.otf`') format('truetype');
+  font-weight: bold;
+} */
 
 * {
   box-sizing: border-box;
@@ -17,7 +25,7 @@
 body {
   background-color: #fbfbfb;
   height: 100vh;
-  font-family: avenir;
+  font-family: Avenir;
 }
 
 html,
@@ -72,12 +80,15 @@ body {
   font-weight: 900;
   letter-spacing: -0.01px;
   color: #000000;
+  /* font-family: 'avenir-heavy'; */
+  font-family: 'Avenir Heavy';
 }
 
 .contact-text p {
   font-size: 20px;
   font-weight: normal;
   color: #58595b;
+  font-family: 'Avenir Book';
 }
 
 .privacy-message {
@@ -114,10 +125,8 @@ input {
     #85baae 83%,
     #cbe5c2 118%
   );
-
   border-image-slice: 1;
   cursor: text;
-
   font-size: 20px;
   font-weight: 500;
   line-height: 1.35;
@@ -128,6 +137,7 @@ input {
   border-right: 0;
   height: 50px;
   background-color: #fbfbfb;
+  font-family: 'Avenir Medium';
 }
 
 textarea:focus {
@@ -184,6 +194,7 @@ label {
   border-top: 0;
   border-left: 0;
   border-right: 0;
+  font-family: 'Avenir Book';
 }
 
 .hyperlink-style {
@@ -256,21 +267,37 @@ form {
   position: relative;
 }
 
-/* The Close Button */
-.close {
-  /* color: #aaaaaa; */
-  position: absolute;
-  top: -45px;
-  right: 2px;
-  color: white;
-  font-size: 50px;
-}
-
-.close:hover,
-.close:focus {
+.close-icon:hover,
+.close-icon:focus {
   cursor: pointer;
   font-weight: bold;
-  color: white;
+  color: grey;
+}
+
+.close-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -30px;
+  right: -10px;
+}
+
+.close-first-line {
+  position: absolute;
+  height: 25px;
+  width: 1px;
+  margin-left: 12px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.close-second-line {
+  height: 25px;
+  width: 1px;
+  background-color: white;
+  transform: rotate(90deg);
+  z-index: 2;
 }
 
 .modal-footer a {
@@ -298,7 +325,7 @@ form {
 }
 
 .message-container label {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.35;
   letter-spacing: 0px;
@@ -306,6 +333,7 @@ form {
 
 .error-message-color {
   color: #9b0000;
+  font-family: 'Avenir Book';
 }
 
 @media only screen and (max-width: 600px) {

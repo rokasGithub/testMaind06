@@ -5,7 +5,7 @@ const lastName = document.getElementById('lastname')
 const email = document.getElementById('email')
 const message = document.getElementById('message')
 const modal = document.getElementById("myModal");
-const close = document.getElementsByClassName("close")[0];
+const close = document.querySelector(".close-icon");
 const emailError = document.querySelector(".email-error-container");
 const firstNameError = document.querySelector(".firstname-error-container");
 const lastNameError = document.querySelector(".lastname-error-container");
@@ -45,7 +45,7 @@ document.querySelectorAll('.input-form').forEach(item => {
 forSubmissionButton.addEventListener('click', event => {
   event.preventDefault();
   const validateUserData = validateUserInformation()
-  clearUserData()
+  // clearUserData()
   modal.style.display = "block";
 });
 
