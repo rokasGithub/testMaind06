@@ -162,7 +162,7 @@ input:focus {
 
 input:placeholder-shown + label {
   cursor: text;
-  /* max-width: 66.66%; */
+  max-width: 66.66%;
   overflow: hidden;
   transform-origin: left bottom;
   transform: translate(0, 2.125rem) scale(1);
