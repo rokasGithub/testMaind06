@@ -18,6 +18,7 @@ let userFeedback = {
   errorMessages: []
 };
 
+
 // Object.freeze(userFeedback);
 
 document.querySelectorAll('.input-form').forEach(item => {
